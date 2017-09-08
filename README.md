@@ -1,2 +1,42 @@
-# unity-panel-manager-interfaces
-A PanelManager manages a set of panels that can be opened and closed. A common example would be a manager for a set of popup windows (each window being a kind of Panel). The interfaces for PanelManager are kept in a separate package to allow other packages to interact with PanelManagers without depending on any implementation.
+# TEMPLATE
+
+...
+
+## Usage
+
+See the tests in the `Editor/` folder for each class for usage examples.
+
+## Install
+
+From your unity project folder:
+
+    npm init
+    npm install TEMPLATE --save
+    echo Assets/packages >> .gitignore
+    echo Assets/packages.meta >> .gitignore
+
+The package and all its dependencies will be installed in
+your Assets/packages folder.
+
+## Development
+
+Setup and run tests:
+
+    npm install
+    npm install ..
+    cd test
+    npm install
+    gulp
+
+Remember that changes made to the test folder are not saved to the package
+unless they are copied back into the source folder.
+
+To reinstall the files from the src folder, run `npm install ..` again.
+
+### Tests
+
+All tests are wrapped in `#if ...` blocks to prevent test spam.
+
+You can enable tests in: Player settings > Other Settings > Scripting Define Symbols
+
+The test key for this package is: TEMPLATE_TESTS
