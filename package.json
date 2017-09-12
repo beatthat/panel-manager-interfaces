@@ -1,7 +1,7 @@
 {
-    "name": "panel-managers-interfaces",
+    "name": "panel-manager-interfaces",
     "scope": "ape",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A PanelManager controls the opening and closing of a collection of panels.",
     "main": "index.js",
     "repository": {
