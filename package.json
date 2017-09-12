@@ -1,38 +1,36 @@
 {
-  "name": "panel-managers-core",
-  "scope": "ape",
-  "version": "0.0.1",
-  "description": "Panel uses an Animator's 'panelState' property to control transitions.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/beatthat/unity-panel-interfaces.git"
-  },
-  "files": [
-    "index.js",
-    "scripts",
-    "src"
-  ],
-  "author": "larrykirschner@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/beatthat/unity-panel-interfaces/issues"
-  },
-  "homepage": "https://github.com/beatthat/unity-panel-interfaces",
-  "scripts": {
-    "postinstall": "node scripts/postinstall.js",
-    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
-    "clean": "rm -f *.tgz && cd test && npm run clean",
-    "sync:test2src": "rsync -rv --include '*/' --include '*.cs' --exclude '*' --prune-empty-dirs test/Assets/Plugins/${npm_package_scope}/${npm_package_name}/ ./src/${npm_package_name}/"
-  },
-  "dependencies": {
-    "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
-    "bindings": "github:beatthat/bindings#semver:^0.0.4",
-    "convert-type-ext": "github:beatthat/convert-type-ext#semver:^0.0.1",
-    "options": "github:beatthat/options#semver:^0.0.1",
-    "pools": "github:beatthat/pools#semver:^0.0.7",
-    "notifications": "github:beatthat/notifications#semver:^0.0.10",
-    "type-utils": "github:beatthat/type-utils#semver:^0.0.5"
-  }
+    "name": "panel-managers-interfaces",
+    "scope": "ape",
+    "version": "0.0.2",
+    "description": "A PanelManager controls the opening and closing of a collection of panels.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/beatthat/unity-panel-interfaces.git"
+    },
+    "files": [
+        "index.js",
+        "scripts",
+        "src"
+    ],
+    "author": "larrykirschner@gmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/beatthat/unity-panel-interfaces/issues"
+    },
+    "homepage": "https://github.com/beatthat/unity-panel-interfaces",
+    "scripts": {
+        "postinstall": "node scripts/postinstall.js",
+        "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
+        "clean": "rm -f *.tgz && cd test && npm run clean",
+        "cp:test2src": "cd test && node scripts/cp-test2src.js",
+        "overwrite:test2src": "cd test && node scripts/overwrite-test2src.js",
+        "pub:tag": "git add -A && git commit -m ${npm_package_version} && git tag -a ${npm_package_version} -m ${npm_package_version} && git push origin master && git push origin ${npm_package_version}"
+    },
+    "dependencies": {
+        "path": "^0.12.7",
+        "unity-npm-utils": "github:beatthat/unity-npm-utils#semver:^0.0.9",
+        "options": "github:beatthat/options#semver:^0.0.1",
+        "notifications": "github:beatthat/notifications#semver:^0.0.10"
+    }
 }

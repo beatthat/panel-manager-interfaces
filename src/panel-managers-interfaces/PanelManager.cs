@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BeatThat
 {
 	/// <summary>
-	/// Manages a set of Panels where generally only one should be 'active' at any given time.
+	/// Manages opening and closing a collection of panels.
 	/// </summary>
 	public interface PanelManager 
 	{
