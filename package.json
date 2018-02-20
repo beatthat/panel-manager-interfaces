@@ -27,11 +27,12 @@
       "preinstall:test": "rm -f *.tgz",
       "cp:test2src": "cd test && node scripts/cp-test2src.js",
       "overwrite:test2src": "cd test && node scripts/overwrite-test2src.js",
-      "pub:tag": "git add -A && git commit -m ${npm_package_version} && git tag -a ${npm_package_version} -m ${npm_package_version} && git push origin master && git push origin ${npm_package_version}"
+      "version": "git add -A",
+      "postversion": "git push && git push --tags && npm run clean"
     },
     "dependencies": {
         "path": "^0.12.7",
-        "unity-npm-utils": "github:beatthat/unity-npm-utils#semver:^0.0.58",
+        "unity-npm-utils": "github:beatthat/unity-npm-utils#semver",
         "options": "github:beatthat/options#semver:^0.0.1",
         "notifications": "github:beatthat/notifications#semver:^0.0.10"
     }
