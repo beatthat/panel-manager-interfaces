@@ -32,7 +32,7 @@
     },
     "dependencies": {
         "path": "^0.12.7",
-        "unity-npm-utils": "github:beatthat/unity-npm-utils#semver",
+        "unity-npm-utils": "github:beatthat/unity-npm-utils",
         "options": "github:beatthat/options#semver:^0.0.1",
         "notifications": "github:beatthat/notifications#semver:^0.0.10"
     }
