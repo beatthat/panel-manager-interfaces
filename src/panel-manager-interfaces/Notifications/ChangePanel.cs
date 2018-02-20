@@ -1,4 +1,4 @@
-﻿using BeatThat;
+using BeatThat;
 using System;
 using UnityEngine;
 using System.Collections.Generic;

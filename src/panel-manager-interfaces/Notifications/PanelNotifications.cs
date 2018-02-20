@@ -1,5 +1,6 @@
 using BeatThat.App;
 using BeatThat;
+using UnityEngine;
 
 namespace BeatThat
 {
@@ -32,7 +33,19 @@ namespace BeatThat
 
 		public static void Close(object panel = null, bool showLast = false)
 		{
-			NotificationBus.SendWBody<ClosePanel>(CLOSE, new ClosePanel(panel, showLast));
+			var go = panel as GameObject ?? (panel as Component != null) ? (panel as Component).gameObject : null;
+			NotificationBus.SendWBody<ClosePanel>(CLOSE, new ClosePanel {
+				panelGO = go,
+				showLast = showLast
+			});
+		}
+
+		public static void Close<T>(bool showLast = false)
+		{
+			NotificationBus.SendWBody<ClosePanel>(CLOSE, new ClosePanel {
+				panelType = typeof(T),
+				showLast = showLast
+			});
 		}
 
 		[NotificationType]

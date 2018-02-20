@@ -1,4 +1,4 @@
-﻿using BeatThat;
+using BeatThat;
 
 namespace BeatThat
 {

@@ -27,6 +27,11 @@ namespace BeatThat
 		/// Closes the panel if it is the active panel
 		/// </summary>
 		void ClosePanel(GameObject p, bool showPreviousPanel = true);
+
+		/// <summary>
+		/// Closes the panel of type if it is the active panel
+		/// </summary>
+		void ClosePanel(Type p, bool showPreviousPanel = true);
 		
 		/// <summary>
 		/// Closes the active panel if any.
