@@ -1,13 +1,12 @@
-using BeatThat;
 using System;
 using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	/// <summary>
-	/// Manages opening and closing a collection of panels.
-	/// </summary>
-	public interface PanelManager 
+    /// <summary>
+    /// Manages opening and closing a collection of panels.
+    /// </summary>
+    public interface PanelManager 
 	{
 		/// <summary>
 		/// Gets the active panel if any or returns NULL if none
@@ -51,3 +50,4 @@ namespace BeatThat
 		
 	}
 }
+

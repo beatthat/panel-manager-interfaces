@@ -1,8 +1,6 @@
-using BeatThat;
-
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	public static class ChangePanelOptions 
+    public static class ChangePanelOptions 
 	{
 		public static readonly Option<bool> OPT_PUSH = new Option<bool>("PUSH");
 		public static readonly Option<bool> OPT_NO_SCRIM = new Option<bool>("NO_SCRIM");
@@ -10,3 +8,4 @@ namespace BeatThat
 	}
 
 }
+

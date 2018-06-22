@@ -1,47 +1,20 @@
-using BeatThat;
 using System;
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	/// <summary>
-	/// Argument object used to tell a PanelManager to either open or close a Panel.
-	/// 
-	/// Generally passed via Notification, e.g.
-	/// 
-	/// <code>
-	/// PanelNotifications.Open(new ChangePanel(myPanelObj));
-	/// </code>
-	/// </summary>
-	public struct ChangePanel 
+    /// <summary>
+    /// Argument object used to tell a PanelManager to either open or close a Panel.
+    /// 
+    /// Generally passed via Notification, e.g.
+    /// 
+    /// <code>
+    /// PanelNotifications.Open(new ChangePanel(myPanelObj));
+    /// </code>
+    /// </summary>
+    public struct ChangePanel 
 	{
-//		public static ChangePanel Create(object p, object model = null, bool push = false, bool noScrim = false, bool controlsOwnPosition = false)
-//		{
-//			IDictionary<string, object> opts = null;
-//
-//			if(push) {
-//				opts = new Dictionary<string, object> ();
-//				OPT_PUSH.Set(true, opts);
-//			}
-//				
-//			if(noScrim) {
-//				opts = opts?? new Dictionary<string, object>();
-//				OPT_NO_SCRIM.Set(true, opts);
-//			}
-//
-//			if(controlsOwnPosition) {
-//				opts = opts?? new Dictionary<string, object>();
-//				OPT_CONTROLS_OWN_POSITION.Set(true, opts);
-//			}
-//
-//			if(model != null) {
-//				opts = opts?? new Dictionary<string, object>();
-//				OPT_MODEL.Set(model, opts);
-//			}
-//
-//			return new ChangePanel(p, opts);
-//		}
 
 		/// <summary>
 		/// Create a ChangePanel object with (optional) options dictionary.
@@ -134,3 +107,5 @@ namespace BeatThat
 
 	}
 }
+
+

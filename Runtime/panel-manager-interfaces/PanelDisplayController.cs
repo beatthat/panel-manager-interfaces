@@ -1,12 +1,12 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	/// <summary>
-	/// Manages display depth of a gameobect's children
-	/// </summary>
-	public interface PanelDisplayController 
+    /// <summary>
+    /// Manages display depth of a gameobect's children
+    /// </summary>
+    public interface PanelDisplayController 
 	{
 		/// <summary>
 		/// Updates the display depth of a list of transforms (children of the controller)
@@ -16,3 +16,5 @@ namespace BeatThat
 		void UpdateDisplayList(IEnumerable<Transform> displayList);
 	}
 }
+
+

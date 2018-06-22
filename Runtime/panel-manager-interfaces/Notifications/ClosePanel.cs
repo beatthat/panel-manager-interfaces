@@ -1,12 +1,13 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	public struct ClosePanel 
+    public struct ClosePanel 
 	{
 		public GameObject panelGO;
 		public Type panelType;
 		public bool showLast;
 	}
 }
+

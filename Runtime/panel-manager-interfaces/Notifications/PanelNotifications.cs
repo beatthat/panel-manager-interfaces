@@ -1,25 +1,25 @@
-using BeatThat.App;
-using BeatThat;
+using System.Collections.Generic;
+using BeatThat.Notifications;
 using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	/// <summary>
-	/// Notification helpers for opening and closing panels, generally observed/handled by a PanelManager.
-	/// </summary>
-	public static class PanelNotifications  
+    /// <summary>
+    /// Notification helpers for opening and closing panels, generally observed/handled by a PanelManager.
+    /// </summary>
+    public static class PanelNotifications  
 	{
 		[NotificationType]
 		public const string OPEN = "PANEL_OPEN";
 
-		public static void Open(object panel)
+		public static void Open(object panel, IDictionary<string, object> opts = null)
 		{
-			Open(new ChangePanel(panel));
+			Open(new ChangePanel(panel, opts));
 		}
 
-		public static void Open<T>()
+		public static void Open<T>(IDictionary<string, object> opts = null)
 		{
-			var r = ChangePanel.OfType<T>();
+			var r = ChangePanel.OfType<T>(opts);
 			Open(r);
 		}
 
@@ -30,6 +30,13 @@ namespace BeatThat
 
 		[NotificationType]
 		public const string CLOSE = "PANEL_CLOSE";
+
+		[NotificationType]
+		public const string CLOSE_ALL = "PANEL_CLOSE_ALL";
+		public static void CloseAll()
+		{
+			NotificationBus.Send (CLOSE_ALL);
+		}
 
 		public static void Close(object panel = null, bool showLast = false)
 		{
@@ -56,3 +63,4 @@ namespace BeatThat
 		}
 	}
 }
+

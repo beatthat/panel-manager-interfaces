@@ -12,7 +12,8 @@
     "index.js",
     "scripts",
     "src",
-    "Runtime"
+    "Runtime",
+    "Samples"
   ],
   "author": "larrykirschner@gmail.com",
   "license": "MIT",
@@ -35,7 +36,7 @@
   "dependencies": {
     "path": "^0.12.7",
     "unity-npm-utils": "github:beatthat/unity-npm-utils#semver:^1.0.0",
-    "options": "github:beatthat/options#semver:^0.0.1",
+    "options": "github:beatthat/options#semver:^1.0.0",
     "notifications": "github:beatthat/notifications#semver:^1.0.0"
   },
   "devDependencies": {}

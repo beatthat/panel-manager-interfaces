@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Panels
 {
-	public struct ManagedPanel 
+    public struct ManagedPanel 
 	{
 		public ManagedPanel(GameObject p, GameObject manager = null)
 		{
@@ -27,3 +27,4 @@ namespace BeatThat
 	}
 
 }
+
