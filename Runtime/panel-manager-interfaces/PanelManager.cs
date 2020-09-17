@@ -45,7 +45,7 @@ namespace BeatThat.Panels
 		/// <param name='req'>Request object contains the panel to open or otherwise info to open a panel</param>
 		/// <param name='skipTransitions'>Skip transitions if true</param>
 		/// <param name='showPreviousPanel'>If changing to null (close active panel if any), 
-		/// set TRUE to force the behavioir of popping one panel instead of closing all</param>
+		/// set TRUE to force the behavior of popping one panel instead of closing all</param>
 		void ChangePanel(ChangePanel req, bool skipTransitions = false, bool showPreviousPanel = false);
 		
 	}
